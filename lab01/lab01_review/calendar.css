@@ -1,0 +1,41 @@
+th{
+    background-color: lightsteelblue;
+    width: 50px;
+}
+td{
+    height: 40px;
+
+    border-style:solid;
+    border-width: thin;
+    border-color: darkgray;
+
+    text-align:center;
+    vertical-align:middle;
+}
+table{
+    border-collapse:collapse;
+}
+caption{
+    color:darkgreen;
+    text-transform:uppercase;
+
+    font-size: large;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight:bolder;
+    font-style: italic;
+}
+
+img{
+    width: 250px;
+    height: 250px;
+    object-fit:cover;
+
+    float: right;
+    margin: 5px 15px;
+}
+.sundays{
+    color:firebrick;
+}
+#bookmark{
+    text-align: center;
+}

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My HTML page</title>
+    <link href="calendar.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <!--------块元素---------->
+    <h1>
+        This is a big heading.
+    </h1>
+    <h6>
+        This is a small heading.
+    </h6>
+    <p>
+        This is a paragraph,mainly for text paragraphs.
+    </p>
+    <div>
+        This is a div element,often used as a container for other HTML elements.
+    </div>
+    <hr>
+    <h3 id='bookmark'>The bookmark</h3>
+
+<!-- 表格元素 -->
+<!-- 无序列表 -->
+    <ul>
+        <li>List item 1</li>
+        <li>List item 2</li>
+        <li>List item 3</li>
+        <li>List item 4</li>
+        <li>List item 5</li>
+        <li>List item 6</li>
+    </ul>
+<!-- 有序列表 -->
+    <ol>
+        <li>List item 1</li>
+        <li>List item 2</li>
+        <li>List item 3</li>
+        <li>List item 4</li>
+        <li>List item 5</li>
+    </ol>
+<!--有序列表反转排序 -->
+    <ol reversed>
+        <li>List item 1</li>
+        <li>List item 2</li>
+        <li>List item 3</li>
+        <li>List item 4</li>
+        <li>List item 5</li>
+    </ol>
+<!-- 表格元素 -->
+    <table>
+        <caption>Sept 2021</caption>
+        <tr>
+            <th>SUN</th>
+            <th>MON</th>
+            <th>TUE</th>
+            <th>WED</th>
+            <th>THU</th>
+            <th>FRI</th>
+            <th>SAT</th>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+        </tr>
+    </table>
+
+    <!-- exercise 1 9月日历 -->
+    <table>
+       <caption>Sep 2021</caption>
+       <tr>
+           <th>SUN</th>
+           <th>MON</th>
+           <th>TUE</th>
+           <th>WED</th>
+           <th>THU</th>
+           <th>FRI</th>
+           <th>SAT</th>
+       </tr> 
+       <tr>
+           <td class='sundays'></td>
+           <td></td>
+           <td></td>
+           <td>1</td>
+           <td>2</td>
+           <td>3</td>
+           <td>4</td>
+       </tr>
+       <tr>
+           <td class='sundays'>5</td>
+           <td>6</td>
+           <td>7</td>
+           <td>8</td>
+           <td>9</td>
+           <td>10</td>
+           <td>11</td>
+       </tr>
+       <tr>
+          <td class='sundays'>12</td>
+          <td>13</td>
+          <td>14</td>
+          <td>15</td>
+          <td>16</td>
+          <td>17</td>
+          <td>18</td>
+       </tr>
+       <tr>
+          <td class='sundays'>19</td>
+          <td>20</td>
+          <td>21</td>
+          <td>22</td>
+          <td>23</td>
+          <td>24</td>
+          <td>25</td>
+       </tr>
+       <tr>
+          <td class='sundays'>26</td>
+          <td>27</td>
+          <td>28</td>
+          <td>29</td>
+          <td>30</td>
+          <td></td>
+          <td></td>
+       </tr>
+    </table>
+ <!--------内嵌元素---------->
+   <img src="https://picsum.photos/id/326/300/200.jpg" alt="Herbal tea" />
+   <a href="https://picsum.photos"> A Link </a>
+   <span>This is a span, also often used as a container for other HTML elements.</span>
+   <br/>
+
+   <!-- 图像元素 -->
+   <!--src＋图片地址   alt+图像的文本描述（该描述不会显示在页面中）-->
+   <img src="https://picsum.photos/id/326/300/200.jpg" alt="Herbal tea" />
+
+   <!-- 链接    <a>定义  href属性指定目标地址 -->
+    <a href="https://picsum.photos/"> A Link </a>
+    <br/>
+
+    <!-- 书签   构建一个跳转到bookmark的书签链接-->
+    <a href="#bookmark">Jump to'The Bookmark'</a>
+    <br/>
+    
+    <!--换行元素-->
+    <span1>以下是空行:</span1>
+    <br><br><br><br><br>
+</body>
+</html>

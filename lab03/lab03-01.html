@@ -1,0 +1,49 @@
+<html>
+
+<head>
+    <title>lab #03-01 Chart.js</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    <div>
+        <canvas id="myChart"></canvas>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        const labels = [
+            'January',
+            'February',
+            'March',
+            'April',
+            'May',
+            'June',
+        ];
+        const data = {
+            labels:labels,
+            datasets:[{
+                labels:'My First dataset',
+                backgroundColor:'rgb(255,99,132)',
+                borderColor:'rgb(255,99,132)',
+                //label的数量和data元素的个数匹配
+                data:[0,10,5,2,20,30,45],
+            }]
+        };
+        //config定义了图表的类型:line
+        const config = {
+            type:'line',
+            //定义data的来源
+            data:data,
+            options:{}
+        };
+        var myChart = new Chart(
+            //提供canvas参数
+            document.getElementById('myChart'),
+            //提供图表的所有配置
+            config
+        );
+    </script>
+</body>
+
+</html>
