@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="en" class="has-navbar-fixed-top">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link href="CSS\home.css" rel="stylesheet">
+    <link href="CSS\management.css" rel="stylesheet">
+    <link href="CSS\quarter.css" rel="stylesheet">
+    <link href="CSS\form.css" rel="stylesheet">
+    <link href="CSS\contact.css" rel="stylesheet">
+    <!-- <link href="CSS\lunbo.css" rel="stylesheet"> -->
+
+    <title>Staff Quarters at Fo Tan</title>
+
+    <style>
+        body {
+            background-color: powderblue;
+        }
+    </style>
+</head>
+
+<body>
+    <!--导航栏 Start-->
+    <nav class="navbar is-fixed-top is-white" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="https://bulma.io">
+                <img src="image\logo.png" width="120" height="30">
+            </a>
+            <!--定义只会在Mobile出现的内容   navbar-burger只能是navbar-brand的最后一个孩子-->
+            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false"
+                data-target="navbarBasicExample">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+        </div>
+        <!--导航最左边-->
+        <div id="navbarBasicExample" class="navbar-menu">
+            <div class="navbar-start">
+                <a class="navbar-item" href="#home">
+                    Home
+                </a>
+
+                <a class="navbar-item" href="#management">
+                    Management
+                </a>
+                <div class="navbar-item has-dropdown is-hoverable">
+                    <a class="navbar-link" href="#quarter">
+                        The Quarters
+                    </a>
+                    <div class="navbar-dropdown is-boxed">
+                        <a class="navbar-item" href="#apartment">
+                            Apartment
+                        </a>
+                        <a class="navbar-item" href="#facility">
+                            Facility
+                        </a>
+                        <a class="navbar-item" href="#carpark">
+                            Carpark
+                        </a>
+                    </div>
+                </div>
+
+                <a class="navbar-item" href="#form">
+                    Useful Form
+                </a>
+
+                <a class="navbar-item" href="#contact">
+                    Contact Us
+                </a>
+
+
+            </div>
+            <!--导航最右边-->
+            <div class="navbar-end">
+                <div class="navbar-item">
+                    <div class="buttons">
+                        <a class="button is-primary" href="mailto:wang_chaoju@126.com">
+                            <strong>Email Us</strong>
+
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!--导航栏 End-->
+
+    <!--Home Start-->
+    <section id="home">
+        <header class="header_home">
+            <div class="home_image1">
+                <img src="image\image_home1.jpg" alt="Quarter1">
+            </div>
+        </header>
+
+
+        <div class="container_home">
+            <div class="columns is-multiline frame2">
+                <div class="column col">
+                    <div class="block">
+                        <figure class="image is-3by2">
+                            <img src="image\image_home2.jpg" alt="Quarter2" style="object-fit:cover">
+                        </figure>
+                        <div class="column content is-medium">
+                            <h4 class="head" style="font-family: 'Times New Roman', Times, serif;">Residential Unit</h4>
+                            <ur style="font-family: 'Times New Roman', Times, serif;;">
+                                <li>68 residential units(3-4 bedrooms per unit)are available.</li>
+                                <li>Floor areas : 100 to 170 square meters.</li>
+                            </ur>
+                        </div>
+                    </div>
+                </div>
+                <div class="column col">
+                    <div class="block">
+                        <figure class="image is-3by2">
+                            <img src="image\image-home3.jpg" alt="Quarter3" style="object-fit:cover">
+                        </figure>
+                        <div class="content is-medium">
+                            <!-- <br> -->
+                            <h4 class="head" style="font-family: 'Times New Roman', Times, serif;">Furniture</h4>
+                            <p class="text">
+                                Each unit has standard furniture and welcome kits (blankets, sheets, kitchenware and
+                                daily essentials) are provided.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="column col">
+                    <div class="block">
+                        <figure class="image is-3by2">
+                            <img src="image\image_home4.jpg" alt="Quarter4" style="object-fit:cover">
+                        </figure>
+                        <div class="content is-medium">
+                            <!-- <br> -->
+                            <h4 class="head" style="font-family: 'Times New Roman', Times, serif;">Facility</h4>
+                            <p class="text">
+                                The staff quarters are equipped with swimming pool,fitness room, squash room, table
+                                tennis
+                                room and children's playground.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="column col">
+                    <div class="block">
+                        <figure class="image is-3by2">
+                            <img src="image\image_home5.png" alt="Quarter5" style="object-fit:cover">
+                        </figure>
+                        <div class="content is-medium">
+                            <h4 class="head" style="font-family: 'Times New Roman', Times, serif;">Property Management
+                            </h4>
+                            <p class="text">
+                                SINO Property Management Co.Ltd was appointed to manage the common area and facilities
+                                of the hostel.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </section>
+    <!--Home End-->
+
+    <!--Management Start-->
+    <section id="management" class="section is-paddingless-horizontal" style="padding-top: 0;">
+        <div class="container grid" style="max-width: 1024px;">
+
+            <!-- .section -->
+            <div class="section is-paddingless-horizontal">
+                <h1 class="title is-2">
+                    The Management
+                </h1>
+                <h2 class="subtitle is-3 has-text-grey-light">
+                    Hong Kong Baptist University
+                </h2>
+            </div>
+            <!-- /.section -->
+
+            <div class="content is-medium">
+                <p>
+                    <strong>1.</strong> To supervise the performance of the property management service company.<br>
+                    <strong>2.</strong> To manage the move-in and move-out of residents.</br>
+                    <strong>3.</strong> To manage and maintain the household facilities e.g. University provided
+                    furniture, household
+                    appliances inside the apartment. For request of any repairs and maintenance works inside the
+                    apartment, please fill in and return us the <a href="text\maint-form.doc"
+                        download="maint-form.doc">Request for Maintenance/Repair Service Form</a>.
+                </p>
+            </div>
+            <div class="section is-paddingless-horizontal">
+                <h1 class="title is-2">
+                    The Management
+                </h1>
+                <h2 class="subtitle is-3 has-text-grey-light">
+                    Propety Manager
+                </h2>
+            </div>
+            <div class="content is-medium">
+                <p>
+                    A competent Property Management Company, <strong>SINO Property Management Co. Ltd (SINO)</strong> is
+                    appointed to
+                    manage the common areas and facilities of Staff Quarters. A team of experience and responsible staff
+                    is deployed on-site by SINO to take care the day-to-day management duties.
+                </p>
+                <p class="content is-small">
+                    <strong>1.</strong>To operate a Management Office and a 24 hours security control room.<br>
+                    <strong>2.</strong>To provide security, cleaning and landscaping service to the common areas.<br>
+                    <strong>3.</strong>To provide repair and maintenance service to the common areas and facilities e.g.
+                    swimming pool,
+                    lift, fire service system, carpark facility etc.<br>
+                    <strong>4.</strong>To handle emergency incident e.g. fire, flooding. lift trap, etc if happened.
+                </p>
+            </div>
+            <div>
+                <hr />
+                <div class="content is-small">
+                    <div class="icon-text">
+                        <span class="icon has-text-warning">
+                            <i class="fas fa-exclamation-triangle"></i>
+                        </span>
+                        <span> Warning:</span>
+                        <span>
+                            All staff are not allowed to work for residents privately for a return nor can
+                            they receive
+                            instructions which may conflict with their normal duties. Should you have any
+                            suggestions/requests
+                            in related to the management and maintenance of the Staff Quarters, you can express your
+                            opinions by
+                            filling and returning the <a href="text\suggestion-form.doc"
+                                download="suggestion-form.doc">Suggestion Form</a> or contact the Estates Office
+                            directly.
+                        </span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!--Management End-->
+
+    <!--Quarter Strat-->
+    <section id="quarter" class="section is-paddingless-horizontal" style="padding-top: 0;">
+        <!--Apartment Start-->
+        <div id="apartment" class="container grid" style="max-width: 1024px;">
+            <div class="section is-paddingless-horizontal">
+                <h1 class="title is-2">
+                    The Quarters
+                </h1>
+                <h2 class="subtitle is-3 has-text-grey-light">
+                    —— About Our Apartment
+                </h2>
+            </div>
+
+            <!-- chart start-->
+            <figure class="columns is-mobile is-variable is-0 is-marginless grid-xl">
+                <div class="column">
+                    <div class="image card">
+                        <a><img src="image\image_quarter1.png"></a>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="image card">
+                        <a><img src="image\image_quarter2.png"></a>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="image card">
+                        <a><img src="image\image_quarter1.png"></a>
+                    </div>
+                </div>
+            </figure>
+            <figcaption class="level">
+                <small class="level-item has-text-grey">
+                    The Photo of Staff Quarter
+                </small>
+            </figcaption>
+
+            <div class="content_chart is-multiline">
+                <div class="pie_chart">
+                    <canvas id="myChart1"></canvas>
+                </div>
+                <div class="pie_text">
+                    <p>① Tower 1 to Tower 3 </p>
+                    <P>② A total of 68 apartments</P>
+                    <p>③ Ranging from 100 sq.m. to 170 sq.m.</p>
+                </div>
+            </div>
+            <!-- chart end-->
+            <hr>
+        </div>
+        <!--Apartment End-->
+
+        <!--Facilities Start-->
+        <div id="facility" class="container grid" style="max-width: 1024px;">
+
+            <div class="section is-paddingless-horizontal">
+                <h1 class="title is-2">
+                    The Quarters
+                </h1>
+                <h2 class="subtitle is-3 has-text-grey-light">
+                    —— About Our Facilities
+                </h2>
+            </div>
+
+            <!-- columns1 start -->
+            <figure class="columns is-mobile is-variable is-0 is-marginless grid-xl">
+                <div class="column">
+                    <div class="image card">
+                        <a><img src="image\swimmingpool.gif"></a>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="image card">
+                        <a><img src="image\common room.gif"></a>
+                    </div>
+                </div>
+            </figure>
+
+            <figure class="columns is-mobile is-variable is-0 is-marginless grid-xl">
+                <div class="column">
+                    <span
+                        class="level-item is-size-5-desktop has-text-grey-light has-text-weight-semibold is-underlined">
+                        Swimming Pool
+                    </span>
+                </div>
+                <div class="column">
+                    <span
+                        class="level-item is-size-5-desktop has-text-grey-light has-text-weight-semibold is-underlined">
+                        Common Room
+                    </span>
+                </div>
+            </figure>
+            <!-- columns1 end -->
+            <hr>
+            <!-- columns2 start -->
+            <figure class="columns is-mobile is-variable is-0 is-marginless grid-xl">
+                <div class="column">
+                    <div class="image card">
+                        <a><img src="image\squashcourt.gif"></a>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="image card">
+                        <a><img src="image\fitness room.gif"></a>
+                    </div>
+                </div>
+            </figure>
+
+            <figure class="columns is-mobile is-variable is-0 is-marginless grid-xl">
+                <div class="column">
+                    <span
+                        class="level-item is-size-5-desktop has-text-grey-light has-text-weight-semibold is-underlined">
+                        Squash Court
+                    </span>
+                </div>
+                <div class="column">
+                    <span
+                        class="level-item is-size-5-desktop has-text-grey-light has-text-weight-semibold is-underlined">
+                        Fitness Room
+                    </span>
+                </div>
+            </figure>
+            <!-- columns2 end -->
+            <hr>
+            <!-- columns3 start -->
+            <figure class="columns is-mobile is-variable is-0 is-marginless grid-xl">
+                <div class="column">
+                    <div class="image card">
+                        <a><img src="image\playground.gif"></a>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="image card">
+                        <a><img src="image\tabletennis.gif"></a>
+                    </div>
+                </div>
+            </figure>
+
+            <figure class="columns is-mobile is-variable is-0 is-marginless grid-xl">
+                <div class="column">
+                    <span
+                        class="level-item is-size-5-desktop has-text-grey-light has-text-weight-semibold is-underlined">
+                        Children's Playground
+                    </span>
+                </div>
+                <div class="column">
+                    <span
+                        class="level-item is-size-5-desktop has-text-grey-light has-text-weight-semibold is-underlined">
+                        Table Tennis
+                    </span>
+                </div>
+            </figure>
+            <!-- columns3 end -->
+
+        </div>
+        <!--Facilities End-->
+
+        <!--Carpark Start-->
+        <div id="carpark" class="container grid" style="max-width: 1024px;">
+            <div class="section is-paddingless-horizontal">
+                <h1 class="title is-2">
+                    The Quarters
+                </h1>
+                <h2 class="subtitle is-3 has-text-grey-light">
+                    —— About Our Carpark
+                </h2>
+            </div>
+
+            <!-- chart start-->
+            <figure class="columns is-mobile is-variable is-0 is-marginless grid-xl">
+                <div class="column">
+                    <div class="image card">
+                        <a><img src="image\carpark1.jpg"></a>
+                    </div>
+                </div>
+            </figure>
+            <figcaption class="level">
+                <small class="level-item has-text-grey">
+                    The Photo of Carpark
+                </small>
+            </figcaption>
+
+            <div class="content is-medium">
+                <p>
+                    There are a total of 85 car parking spaces (60 covered spaces and 25 open spaces) for use by
+                    residents with valid Parking Permit issued by the Property Management Company. All parking spaces
+                    owned by the University are marked by <strong>yellow border</strong>. Residents are advised to
+                    observe the carpark
+                    regulations and parked in parking spaces marked yellow. Guests parking is also available upon
+                    registration at the entrance guard house.
+                </p>
+            </div>
+            <hr>
+        </div>
+        <!--Carpark End-->
+    </section>
+    <!--Quarter End-->
+
+    <!--Form Start-->
+    <section id="form" class="section is-paddingless-horizontal" style="padding-top: 0;">
+        <div class="container grid" style="max-width: 1024px;">
+
+            <!-- head 1 -->
+            <div class="section is-paddingless-horizontal">
+                <h1 class="title is-2">
+                    The Useful Info.
+                </h1>
+                <h2 class="subtitle is-3 has-text-grey-light">
+                    ———— Estates Office
+                </h2>
+            </div>
+            <!-- table 1 -->
+            <table class="table is-size-6-desktop">
+                <thead>
+                    <tr>
+                        <th><abbr title="Position">No.</abbr></th>
+                        <th>Caption</th>
+                        <th>The detailed information</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th>1</th>
+                        <td>Location</td>
+                        <td>Room 601, <a
+                                href="https://foursquare.com/v/oen-hall-building-%E6%BA%AB%E4%BB%81%E6%89%8D%E5%A4%A7%E6%A8%93/56056cf8498e9d36763f65a0"
+                                title="Oen Hall Building 溫仁才大樓">Oen Hall Building</a>, Ho Sin Hang Campus, Hong Kong
+                            Baptist
+                            University, Kowloon Tong, Kowloon, Hong Kong.</td>
+                    </tr>
+                    <tr>
+                        <th>2</th>
+                        <td>Telephone No.</td>
+                        <td>3411 5660</td>
+                    </tr>
+                    <tr>
+                        <th>3</th>
+                        <td>Fax No.</td>
+                        <td>3411 5627</td>
+                    </tr>
+                    <tr>
+                        <th>4</th>
+                        <td>Office Hours</td>
+                        <td><strong>Monday - Friday</strong> : 9:00 a.m. - 1:00 p.m. <br> 2:00 p.m. - 5:30 p.m.<br>
+                            <strong>Saturday</strong> : 9:00 : a.m. - 12:00 noon<br>
+                            <strong>Sunday & Public Holiday</strong> : Closed
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>5</th>
+                        <td>Contact Person</td>
+                        <td><strong>Mr. Samuel Tam</strong> (Tel : 3411 7682)<br>
+                            <strong>Mr. W.C. Koo</strong> (Tel : 3411 5650)
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <hr>
+
+            <!--head 2-->
+            <div class="section is-paddingless-horizontal">
+                <h2 class="subtitle is-3 has-text-grey-light">
+                    Management Office
+                </h2>
+            </div>
+            <!--table 2-->
+            <table class="table is-size-6-desktop">
+                <thead>
+                    <tr>
+                        <th><abbr title="Position">No.</abbr></th>
+                        <th>Caption</th>
+                        <th>The detailed information</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th>1</th>
+                        <td>Location</td>
+                        <td>Podium Level (1/F) of Tower 1</td>
+                    </tr>
+                    <tr>
+                        <th>2</th>
+                        <td>On-site Supervisor</td>
+                        <td>Mr. Wong</td>
+                    </tr>
+                    <tr>
+                        <th>3</th>
+                        <td>Telephone No.</td>
+                        <td>2688 0465</td>
+                    </tr>
+                    <tr>
+                        <th>4</th>
+                        <td>Fax No.</td>
+                        <td>2688 0590</td>
+                    </tr>
+                    <tr>
+                        <th>5</th>
+                        <td>Office Hours</td>
+                        <td><strong>Monday - Friday</strong> : 9:00 a.m. - 1:00 p.m. <br> 2:00 p.m. - 5:30 p.m.<br>
+                            <strong>Saturday</strong> : 9:00 : a.m. - 12:00 noon<br>
+                            <strong>Sunday & Public Holiday</strong> : Closed
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <hr>
+            <!--Tips-->
+            <div class="content is-small">
+                <span class="icon-text has-text-info">
+                    <span class="icon">
+                        <i class="fas fa-info-circle"></i>
+                    </span>
+                    <span>
+                        24 hours security guards are posted on-site to provide security services and handle all
+                        emergency issues especially during non-office hours.Residents can contact the security-in-charge
+                        when in need at the 24 hours Security Control
+                        Room.
+                    </span>
+                </span>
+                <div class="content tips is-small">
+                    <span class="icon-text has-text-info">
+                        <span class="tip_text">
+                            Location : G/F of Tower 5
+                        </span>
+                        <span class="tip_text">
+                            Telephone No. : 2688 0473
+                        </span>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--Form End-->
+
+    <!--Contact Start-->
+    <section id="contact" class="section is-paddingless-horizontal" style="padding-top: 0;">
+        <div class="container grid" style="max-width: 1024px;">
+
+            <!-- .section -->
+            <div class="section is-paddingless-horizontal">
+                <h1 class="title is-2">
+                    Contact Us
+                </h1>
+                <h2 class="subtitle is-3 has-text-grey-light">
+                    —— Get more about us!
+                </h2>
+            </div>
+            <!-- /.section -->
+
+            <!-- /.section -->
+            <div class="div_contact">
+                <div class="columns">
+                    <div class="column">
+                        <table class="table is-size-6-desktop has-background-info-light" id="table_contact">
+                            <thead>
+                                <tr>
+                                    <th><abbr title="Position"></abbr></th>
+                                    <th>Telephone</th>
+                                    <th>Email</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th>Mr. Li Zhiwen</th>
+                                    <td>3411 5657</td>
+                                    <td>cmli@hkbu.edu.hk</td>
+                                </tr>
+                                <tr>
+                                    <th>Ms Yang Jiexin</th>
+                                    <td>3411 2133</td>
+                                    <td>ashley@hkbu.edu.hk</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                    </div>
+                    <div class="column contact_map">
+                        <div class="map_text has-text-info">
+                            <h3> WHERE ARE WE ? </h3>
+                        </div>
+                        <div class="map_hk" id="mapdiv"></div>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="content is-small">
+                <div class="content tips is-small">
+                    <span class="icon-text has-text-info-light">
+                        <span class="tip_text">
+                            © 2021 Hong Kong Baptist University. All Rights Reserved.
+                        </span>
+                    </span>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <!--Contact End-->
+
+
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <script src="https://cdn.amcharts.com/lib/4/core.js"></script>
+    <script src="https://cdn.amcharts.com/lib/4/charts.js"></script>
+    <script src="//cdn.amcharts.com/lib/4/maps.js"></script>
+    <script src="//cdn.amcharts.com/lib/4/geodata/worldLow.js"></script>
+    <script src="//cdn.amcharts.com/lib/4/geodata/hongKongHigh.js"></script>
+    <script src="//www.amcharts.com/lib/4/themes/animated.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script src="JS\piecharts.js"></script>
+    <script src="JS\mapchart.js"></script>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+
+            // Get all "navbar-burger" elements
+            const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+            // Check if there are any navbar burgers
+            if ($navbarBurgers.length > 0) {
+
+                // Add a click event on each of them
+                $navbarBurgers.forEach(el => {
+                    el.addEventListener('click', () => {
+
+                        // Get the target from the "data-target" attribute
+                        const target = el.dataset.target;
+                        const $target = document.getElementById(target);
+
+                        // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+                        el.classList.toggle('is-active');
+                        $target.classList.toggle('is-active');
+
+                    });
+                });
+            }
+
+        });
+    </script>
+
+
+</body>
+
+</html>

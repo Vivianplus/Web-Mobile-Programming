@@ -1,0 +1,19 @@
+.div_contact{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+#table_contact{
+    border-radius: 30px;
+}
+.contact_map{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-left: 5px;
+}
+/* .map_text{
+
+} */

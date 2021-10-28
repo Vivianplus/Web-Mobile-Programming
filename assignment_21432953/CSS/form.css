@@ -1,0 +1,14 @@
+.table th, .table td {
+    text-align: center;
+    vertical-align: middle!important;
+    }
+.tips{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+.tip_text{
+    margin-left: 8px;
+    margin-right: 8px;
+}
