@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>lab #3-05 World Map</title>
+    <style>
+        body {
+            font: 1em ".AppleSystemUIFont", Helvetica, sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <script src="//www.amcharts.com/lib/4/core.js"></script>
+    <script src="//www.amcharts.com/lib/4/maps.js"></script>
+    <script src="//cdn.amcharts.com/lib/4/geodata/worldLow.js"></script>
+    <script src="//www.amcharts.com/lib/4/themes/animated.js"></script>
+
+    <div id="chartdiv" style="width:100vw; height:100vh;"></div>
+    <script>
+        //animated主题为地图提供了平滑的淡入动画效果
+        am4core.useTheme(am4themes_animated);
+        ////以JSON形式创建地图实例，第一个参数（配置本地图的JS对象），第二个参数（指定地图的id所在div），第三个参数（指定地图类型）
+        var map = am4core.createFromConfig({
+            //"geodata"：为map指定name(am4geodata_worldLow)
+            "geodata": am4geodata_worldLow,
+            //定义投影类
+            "projection": "Miller",
+            "series": [{
+                //地图区域（国家、州等）由类型 表示MapPolygonSeries
+                "type": "MapPolygonSeries",
+                //"useGeodata"设置为true可以自动加载多边形数据，无需手动添加
+                "useGeodata": true,
+                //自定义地图数据
+                "data": 
+                [{
+                    "id": "US",
+                    "name": "United States",
+                    "value": 100,
+                    "fill": "#845EC2"
+                }, 
+                {
+                    "id":"CN",
+                    "name":"China",
+                    "value":960,
+                    "fill":"#F05C5C"
+                },
+                {
+                    "id":"TW",
+                    "name":"China",
+                    "value":960,
+                    "fill":"#F05C5C"
+
+                },
+                {
+                    "id": "FR",
+                    "name": "France",
+                    "value": 50,
+                    "fill": "#5C5CFF"
+                }],
+                //删除南极洲板块
+                "exclude": ["AQ"],
+                //通过修改“mapPolygons”的属性为项目配置外观和行为
+                "mapPolygons": {
+                        "fill": "#74B266",
+                        //"tooltipText"用于设置当用户将鼠标悬停在图表上时显示的内容
+                        "tooltipText": "{name}: {value}",
+                        //为多边形添加“悬停”状态，并添加稍暗的阴影
+                        "states": {
+                            "hover": {
+                                "properties": {"fill": "#367B25"}
+                            }
+                        },
+                        "propertyFields": {"fill": "fill"},
+                },
+
+            }],
+            
+        }, "chartdiv", am4maps.MapChart);
+    </script>
+</body>
+
+</html>

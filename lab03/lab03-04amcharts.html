@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>lab #3-04 amcharts</title>
+    <style>
+        body {
+            font: 1em ".AppleSystemUIFont", Helvetica, sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <!--定义一个id为"chartdiv"的图表区域-->
+    <div id="chartdiv" style="width:100vw; height:100vh;"></div>
+    <!--core.js提供了ancharts的核心功能-->
+    <script src="//www.amcharts.com/lib/4/core.js"></script>
+    <script src="//www.amcharts.com/lib/4/charts.js"></script>
+    <script src="//www.amcharts.com/lib/4/themes/animated.js"></script>
+    <script>
+        //animated主题为图表提供了平滑的淡入动画效果
+        am4core.useTheme(am4themes_animated);
+        //以JSON形式创建图表实例，第一个参数（配置本图表的JS对象），第二个参数（指定图表的id所在div），第三个参数（指定图表类型）
+        var chart = am4core.createFromConfig({
+            "data": [{
+                        "country": "Lithuania",
+                        "litres": 501
+                    }, 
+                    {
+                        "country": "Czechia",
+                        "litres": 301
+                    },
+                    {
+                        "country": "Ireland",
+                        "litres": 201
+                    }, 
+                    {
+                        "country": "Germany",
+                        "litres": 165
+                    }, 
+                    {
+                        "country": "Australia",
+                        "litres": 139
+                    }, 
+                    {
+                        "country": "Austria",
+                        "litres": 128
+                    }, 
+                    {
+                        "country": "UK",
+                        "litres": 99
+                    }, 
+                    {
+                        "country": "Belgium",
+                        "litres": 60
+                    }, 
+                    {
+                        "country": "The Netherlands",
+                        "litres": 50
+            }],
+            //设置水平轴
+            "xAxes": [{
+                        //因为“国家”属于类别，所以选择CategoryAxis为水平轴
+                        "type": "CategoryAxis",
+                        //dataFields.category必须为data数组对象中的属性之一
+                        "dataFields": {
+                                        "category": "country",
+                                        "title": {"text": "Countries"}
+                        }
+            }],
+            //设置垂直轴
+            "yAxes": [{
+                        //"litres"为数值类型，所以选择ValueAxis为垂直轴
+                        "type": "ValueAxis",
+                        "title": {"text": "Litres sold (M)"}
+            }],
+            "series": [{
+                        "type": "ColumnSeries",
+                        "dataFields": {
+                                        "valueY": "litres",
+                                        "categoryX": "country"
+                         },
+                        "columns": {
+                                    //"tooltipText"用于设置当用户将鼠标悬停在图表上时显示的内容
+                                    "tooltipText": "Category: {categoryX}\nValue: {valueY}",
+                                    "fill": "#104547"
+                        }
+             }]
+        }, "chartdiv", am4charts.XYChart);
+
+    </script>
+</body>
+
+</html>

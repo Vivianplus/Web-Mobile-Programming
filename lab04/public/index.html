@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hello Bulma!</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+</head>
+
+
+<body>
+  <section class="section">
+    <div class="container">
+      <h1 class="title">
+        Hello World
+      </h1>
+      <p class="subtitle">
+        My first website with <strong>Bulma</strong>!
+      </p>
+      <div class="columns">
+        <!--create an HTML form for user input.-->
+        <form action="/form" method="POST" class="column is-one-third">
+          <div class="field">
+            <label class="label">Name</label>
+            <div class="control">
+              <input class="input" type="text" placeholder="Text input" name="name" required>
+            </div>
+          </div>
+
+          <div class="field">
+            <label class="label">Number of Tickets</label>
+            <div class="control has-icons-left has-icons-right">
+              <!--限制每个人可以购买的门票数量-->
+              <input class="input is-success" type="number" min=1 max=4 name="numTickets" required>
+              <span class="icon is-small is-left">
+                <i class="fas fa-user"></i>
+              </span>
+              <span class="icon is-small is-right">
+                <i class="fas fa-check"></i>
+              </span>
+            </div>
+            <p class="help is-success">This username is available</p>
+          </div>
+
+          <div class="field">
+            <label class="label">Email</label>
+            <div class="control has-icons-left has-icons-right">
+              <input class="input is-danger" type="email" placeholder="Email input" value="hello@" name="email" required>
+              <span class="icon is-small is-left">
+                <i class="fas fa-envelope"></i>
+              </span>
+              <span class="icon is-small is-right">
+                <i class="fas fa-exclamation-triangle"></i>
+              </span>
+            </div>
+            <p class="help is-danger">This email is invalid</p>
+          </div>
+
+          <div class="field">
+            <label class="label">Team</label>
+            <div class="control">
+              <div class="select">
+                <!--onchange属性，只要选定值发生更改，就会执行函数teamSelected()-->
+                <select name="team" required onchange="teamSelected(this.value)">
+                  <option value="">Select your favourite team here.</option>
+                  <option value="Avengers">Avengers</option>
+                  <option value="JLA">Justice League</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <div class="field">
+            <label class="label">Superhero</label>
+            <div class="control">
+              <div class="select">
+                <!--该select列表被禁用，因为该可选项将根据第一个select列表的选择结果动态创建-->
+                <select id="superhero" name="superhero" required disabled>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <div class="field">
+            <label class="label">Message</label>
+            <div class="control">
+              <textarea class="textarea" placeholder="Textarea" rows="2" name="message"></textarea>
+            </div>
+          </div>
+
+          <div class="field">
+            <div class="control">
+              <label required class="checkbox">
+                <input type="checkbox" required>
+                I agree to the <a href="#">terms and conditions</a>
+              </label>
+            </div>
+          </div>
+
+          <div class="field">
+            <div class="control">
+              <label class="radio">
+                <input type="radio" value="Credit Card" name="payment">
+                Pay by Credit Card
+              </label>
+              <label class="radio">
+                <input type="radio" value="Paypal" name="payment">
+                Pay by Paypal
+              </label>
+            </div>
+          </div>
+
+          <div class="field is-grouped">
+            <div class="control">
+              <button type="submit" class="button is-link">Submit</button>
+            </div>
+            <div class="control">
+              <button type="reset" class="button is-link is-light">Cancel</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    var avengers = ["Captain America", "Iron Man", "Thor", "Hulk", "Black Widow", "Hawkeye"];
+    var jla = ["Superman", "Batman", "Wonder Woman", "Flash", "Green Lantern", "Aquaman"];
+    //定义第一个select列表中的触发函数teamSelected()
+    function teamSelected(team) {
+      // 获取对第二个select列表id的引用;
+      var superheroElem = document.getElementById("superhero");
+      //清除第二个select列表的所有选项
+      superheroElem.options.length = 0;
+      //根据第一个select选择的选项，相应地填充第二个select元素
+      if (team == "Avengers") {
+        //对avengers数组里的每个元素套用funtion(item)
+        avengers.forEach(function (item) {
+          var option = document.createElement("option");
+          option.text = item;
+          option.value = item;
+          superheroElem.add(option);
+        });
+
+        superheroElem.disabled = false;
+
+      }
+      else if (team == "JLA") {
+
+        jla.forEach(function (item) {
+          var option = document.createElement("option");
+          option.text = item;
+          option.value = item;
+          superheroElem.add(option);
+        });
+
+        superheroElem.disabled = false;
+
+      }
+      else {
+
+        superheroElem.disabled = true;
+      }
+    }
+
+  </script>
+
+</body>
+
+</html>

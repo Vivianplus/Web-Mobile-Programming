@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab #2</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <style>
+        .flex-container{
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        .flex-item{
+            background-color: lightsalmon;
+            height: 50px;
+            width: 150px;
+            line-height: 50px;
+            text-align: center;
+            margin: 5px;
+            flex-grow: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <div class="flex-container">
+            <div class="flex-item">1</div>
+            <div class="flex-item">2</div>
+            <div class="flex-item" style="flex-grow: 3;">3</div>
+            <div class="flex-item">4</div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="columns is-mobile is-multiline is-vcentered">
+                <div class="column card is-half-mobile">
+                    <figure class="image is-square">
+                        <img style="object-fit: cover" src="https://picsum.photos/seed/picsum1/500/500"/>
+                    </figure>
+                </div>
+                <div class="column card is-half-mobile">
+                    <figure class="image is-3by4">
+                        <img style="object-fit:cover" src="https://picsum.photos/seed/picsum5/500/1500" />
+                    </figure>
+                </div>
+                <div class="column card is-half-mobile">
+                    <figure class="image is-4by3">
+                        <img style="object-fit:cover" src="https://picsum.photos/seed/picsum2/1500/500" />
+                    </figure>
+                </div>
+                <div class="column card is-half-mobile">
+                    <figure class="image is-square">
+                        <img style="object-fit:cover" src="https://picsum.photos/seed/picsum4/500/500" />
+                    </figure>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="section">
+        <div class="container">
+            <div class="buttons">
+                <button class="button is-primary" onclick="btn1Clicked(this)">
+                    I'm Button 1, Click me!
+                </button>
+                <button class="button is-warning is-light" onclick="btn2Clicked(this)">
+                    I'm Button 2, Click me!
+                </button>
+                <button class="button is-primary is-outlined" onclick="btn3Clicked()">
+                    I'm Button 3, Click me!
+                </button>
+                <button class="button is-warning is-inverted" onclick="btn4Clicked()">
+                    I'm Button 4, Click me!
+                </button>
+                <button class="button is-primary is-outlined is-rounded" onclick="btn5Clicked()">
+                    I'm Button 5, Click me!
+                </button>
+                <button class="button is-warning is-rounded" onclick="btn6Clicked()">
+                    I'm Button 6, Click me!
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <img id="pic" style="float:right" src="https://picsum.photos/id/326/150/150" />
+    <div id="rack">My id is rack!</div>
+
+    <script>
+        function btn1Clicked(elem){
+            console.log("console output");
+            elem.innerHTML = "Don't click me!"
+        }
+        function btn2Clicked(elem){
+            elem.style.display = 'none';
+            elem.parentNode.classList.add("are-medium")
+        }
+        function btn3Clicked(){
+            var pic = document.getElementById("pic");
+            if(pic.style.float == "left"){
+                pic.style.float = "right";
+            }
+            else{
+                pic.style.float = "left";
+            }
+        }
+        function btn4Clicked(){
+            var size = {
+                width:480,
+                height:360
+            };
+            document.getElementById("pic").src = "https://picsum.photos/id/326/"+size.width+"/"+size.height;
+        }
+        function btn5Clicked(){
+            //将class包含is-square和is-16by9的HTML元素选出，放进figures数组
+            var figures = document.querySelectorAll(".is-square, .is-16by9");
+            console.log(figures.length);
+            
+            figures.forEach(function5);
+            function function5(para){
+                //toggle()函数通过添加或删除指定的类名来修改类列表
+                para.classList.toggle("is-square");
+                para.classList.toggle("is-16by9");
+            }
+        }
+        function btn6Clicked(){
+            var dynamicCode = '<table class ="is-bordered is-striped" style="background-color:#1121">';
+            var teamMembers = ["Martin","Kenny","Tony"];
+            //按顺序为teamMembers数组中的每个元素调用一次function6函数
+            teamMembers.forEach(function6);      
+            function function6(member){
+                //每次调用function6函数，dynamicCode就会在原来的基础上加上"<tr><td>"+ member +"</td></tr>"，并更新自身的值
+                dynamicCode = dynamicCode + "<tr><td>"+ member +"</td></tr>";
+            }
+            //最后加上</table>，形成3行1列的HTML表格元素，并用于替换id为rack的div的innerHTML属性值，呈现表格
+            document.querySelector("#rack").innerHTML = dynamicCode + "</table>";
+        }
+    </script>
+</body>
+</html>
